@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <%- include('partials/header.ejs') %>
+        <h2>Lista de usuarios</h2>
+
+        <p>
+            <ul>
+                <% for (let i=0; i<usuarios.length; i++) { %>
+                    <li class="list">
+                        <a href="/detalle/<%=usuarios[i].id%>">Ver </a>
+                        <a href="/usuario/<%=usuarios[i].id%>/actualizar"><strong>Editar</strong> </a>
+                        <!-- <a href="/detalle/<%=usuarios[i].id%>">Ver </a>
+                        <a href="/editar/<%=usuarios[i].id%>"><strong>Editar</strong> </a>
+                        <form action="usuario/<%=usuarios[i].id%>/eliminar?_method=DELETE" method="POST">
+                            <button type="submit"> Eliminar</button>
+                        </form> -->
+                        <%= usuarios[i].name + ' ' +  usuarios[i].surname%>
+                            con correo electrónico
+                            <%= usuarios[i].email %> .
+                    </li>
+                    <% } %>
+            </ul>
+
+        </p>
+
+</body>
+
+</html>
