@@ -1,0 +1,23 @@
+{
+  "name": "libro_de_rostros",
+  "version": "1.0.0",
+  "description": "## Esta app contiene un ejecicio  de MCV, CRUD, MULTER Y MIDDLEWARES ## ESTAMOS SIMULANDO UNA RED SOCIAL IMPLEMENTANDO LOS CONCEPTOS DE MODULO 5 DE DIGITALHOUSE.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoralexCode/libro_de_rostros.git"
+  },
+  "keywords": [],
+  "author": "Ing Oscar Morales",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoralexCode/libro_de_rostros/issues"
+  },
+  "homepage": "https://github.com/MoralexCode/libro_de_rostros#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
