@@ -7,3 +7,9 @@
     background-color: violet;
     border-radius: 0.3em;
 }
+
+.detalle {
+    background-color: cornflowerblue;
+    font-size: 1.5em;
+    color: red;
+}

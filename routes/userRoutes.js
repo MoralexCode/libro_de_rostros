@@ -5,9 +5,9 @@ const userController = require('../controllers/userController');
 router.get('/', userController.registro);
 router.get('/registro', userController.registro);
 router.post('/create', userController.create);
-router.get('/listar', userController.leerTodos);
-router.get('/usuario/:id/actualizar', userController.actualizar);
-router.put('/usuario/:id/actualizar', userController.update);
-router.delete('/usuario/:id/eliminar', userController.delete);
+router.get('/usuarios', userController.leerTodos);
+router.get('/usuarios/:id', userController.read);
+router.put('/usuarios/:id/actualizar', userController.update);
+router.delete('/usuarios/:id/eliminar', userController.delete);
 
 module.exports = router;

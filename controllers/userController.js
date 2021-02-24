@@ -12,10 +12,13 @@ const UserController = {
         res.render('listar-todos', { usuarios: userModel });
     },
     leer: (req, res) => {
-        res.send('Vista listar Usuario');
+
+        res.render('listar', { usuario: user });
     },
     read: (req, res) => {
-        res.send('listar un usuario');
+        let id = parseInt(req.params.id);
+        let user = userModel[id - 1];
+        res.render('listar', { usuario: user });
     },
     actualizar: (req, res) => {
         let id = req.params.id;
