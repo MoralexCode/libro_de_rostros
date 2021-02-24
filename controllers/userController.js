@@ -36,7 +36,10 @@ const UserController = {
         res.send('Actalizar un usuario');
     },
     delete: (req, res) => {
-        res.send('Eliminar un usuario');
+        let id = req.params.id;
+        userModel.splice(parseInt(id) - 1, 1);
+        console.log(' userModel |', userModel);
+        res.render('listar-todos', { usuarios: userModel });
     },
     leerTodos: (req, res) => {
         res.render('listar-todos', { usuarios: userModel });

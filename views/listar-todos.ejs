@@ -18,15 +18,14 @@
                     <li class="list">
                         <a href="/detalle/<%=usuarios[i].id%>">Ver </a>
                         <a href="/usuario/<%=usuarios[i].id%>/actualizar"><strong>Editar</strong> </a>
-                        <!-- <a href="/detalle/<%=usuarios[i].id%>">Ver </a>
-                        <a href="/editar/<%=usuarios[i].id%>"><strong>Editar</strong> </a>
                         <form action="usuario/<%=usuarios[i].id%>/eliminar?_method=DELETE" method="POST">
                             <button type="submit"> Eliminar</button>
-                        </form> -->
+                        </form>
                         <%= usuarios[i].name + ' ' +  usuarios[i].surname%>
                             con correo electrónico
                             <%= usuarios[i].email %> .
                     </li>
+                    <br>
                     <% } %>
             </ul>
 
