@@ -1,0 +1,2 @@
+2021-02-26T01:45:43.252Z | ALERT | usuario sin acceso | /usuarios/1/eliminar?_method=DELETE
+2021-02-26T01:46:36.391Z | ALERT | usuario sin acceso intento eliminar a un usuario | /usuarios/1/eliminar?_method=DELETE

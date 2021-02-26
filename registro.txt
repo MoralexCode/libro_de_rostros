@@ -1,3 +1,7 @@
-2021-02-26T01:30:25.813Z | INFO | El usuario pasó por aquí | /
-2021-02-26T01:30:52.784Z | INFO | El usuario pasó por aquí | /usuarios
-2021-02-26T01:31:14.903Z | INFO | El usuario pasó por aquí | /usuarios/1
+2021-02-26T01:44:53.801Z | INFO | El usuario pasó por aquí | /usuarios/1
+2021-02-26T01:44:59.941Z | INFO | El usuario pasó por aquí | /
+2021-02-26T01:45:02.923Z | INFO | El usuario pasó por aquí | /usuarios
+2021-02-26T01:45:08.402Z | INFO | El usuario pasó por aquí | /usuarios/1/actualizar
+2021-02-26T01:45:43.248Z | INFO | El usuario pasó por aquí | /usuarios/1/eliminar?_method=DELETE
+2021-02-26T01:46:29.531Z | INFO | El usuario pasó por aquí | /usuarios
+2021-02-26T01:46:36.390Z | INFO | El usuario pasó por aquí | /usuarios/1/eliminar?_method=DELETE
