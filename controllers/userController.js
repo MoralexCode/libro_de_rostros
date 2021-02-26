@@ -13,7 +13,7 @@ const UserController = {
     },
     leer: (req, res) => {
 
-        res.render('listar', { usuario: user });
+        res.redirect('/');
     },
     read: (req, res) => {
         let id = parseInt(req.params.id);
@@ -36,7 +36,7 @@ const UserController = {
         let id = req.params.id;
         let usuarioActualizado = req.body;
         console.log('id |', id, ' | query |', req.query, ' | body | ', usuarioActualizado);
-        res.send('Actalizar un usuario');
+        res.redirect('/usuarios/' + id);
     },
     delete: (req, res) => {
         let id = req.params.id;
