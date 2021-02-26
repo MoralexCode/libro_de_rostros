@@ -12,15 +12,27 @@
     <%- include('partials/header.ejs') %>
         <h2>Registro </h2>
         <form action="/create" method="POST">
-            <input type="text" placeholder="Nombre" name="name" id="name"> <br><br>
+            <input type="text" placeholder="Nombre" name="name" id="name" value="<%=locals.body && body.name ? body.name : '' %>"> <br><br>
             <input type="text" placeholder="Apellidos" name="surname" id="surname"> <br><br>
-            <input type="text" placeholder="email" name="email"> <br><br>
+            <input type="text" placeholder="email" name="email" value="<%=locals.body && body.email ? body.email : '' %>"> <br><br>
             <input type="password" placeholder="Contraceña" name="password"> <br><br>
 
             <p class="notice" align="justify">
                 Al hacer clic en "Registrarte", aceptas nuestras Condiciones, <br> la Política de datos y la Política de cookies. Es posible que te<br> enviemos notificaciones por SMS, que puedes desactivar<br> cuando quieras.
             </p>
-            <button type="submit"> Registar</button>
+            <% if(locals.errors){ %>
+                <h4>error</h4>
+                <p align="justify">
+                    <ul>
+                        <%errors.forEach(error=>{ %>
+                            <li class="error">
+                                <%= error.msg %>
+                            </li>
+                            <%}) %>
+                    </ul>
+                </p>
+                <% } %>
+                    <button type="submit"> Registar</button>
         </form>
 </body>
 

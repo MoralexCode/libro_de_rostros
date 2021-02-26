@@ -1,15 +1,26 @@
+const { validationResult } = require('express-validator');
 let userModel = require('../models/userModels');
 const UserController = {
     registro: (req, res) => {
         res.render('registro');
     },
     create: (req, res) => {
-        let { name, surname, email, password } = req.body;
-        let id = userModel.length + 1;
-        const nuevoUsuario = { id, name, surname, email, password }
-        userModel.push(nuevoUsuario);
-        console.log('nuevoUsuario |', userModel);
-        res.render('listar-todos', { usuarios: userModel });
+        let errors = validationResult(req);
+        console.error('|||ERORR|||', errors);
+        if (errors.isEmpty()) {
+            let { name, surname, email, password } = req.body;
+            let id = userModel.length + 1;
+            const nuevoUsuario = { id, name, surname, email, password }
+            userModel.push(nuevoUsuario);
+            console.log('nuevoUsuario |', userModel);
+            res.render('listar-todos', { usuarios: userModel });
+        } else {
+            res.render('registro', {
+                errors: errors.array(),
+                body: req.body
+            });
+        }
+
     },
     leer: (req, res) => {
 
